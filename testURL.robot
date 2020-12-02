@@ -14,8 +14,8 @@ case1
 
 *** Keywords ***
 Baidu Search
-    [Arguments] ${search_keys}
-    Input text    id:kw    ${search_key}
+    [Arguments]    ${searchkeys}
+    Input text    id:kw    ${searchkeys}
     click button    id:su
     Sleep    2
     ${title}    Get title

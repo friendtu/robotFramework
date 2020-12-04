@@ -1,5 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
+Library           ./MyLibrary.py
 
 *** Variables ***
 ${URL}            https://www.baidu.com
@@ -11,6 +12,10 @@ case1
     ${title}    Baidu Search    selenium
     should contain    ${title}    selenium
     close browser
+
+case2
+    ${result}    My keyword    a test
+    log    ${result}
 
 *** Keywords ***
 Baidu Search
